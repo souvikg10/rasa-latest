@@ -1,0 +1,35 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- card_lost
+- utter_card_lost_type
+- utter_goodbye
+- utter_card_retrieval_confirmed
+config:
+  store_entities_as_slots: true
+entities:
+- card_type
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- card_lost:
+    use_entities: true
+slots:
+  card_type:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_card_lost_type:
+  - text: Which type of card have you lost?
+  utter_card_retrieval_confirmed:
+  - text: We have confirmed a new {card_type} card for you
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there!

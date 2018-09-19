@@ -1,0 +1,4 @@
+action_endpoint:
+  url: "http://action:5055/webhook"
+nlg:
+  url: "http://nlg:5056/nlg"

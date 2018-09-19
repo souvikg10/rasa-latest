@@ -1,0 +1,267 @@
+Rasa process starting
+Rasa process starting
+Rasa process starting
+Rasa process starting
+Rasa process starting
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Exception on /webhooks/rest/webhook [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/channels/channel.py", line 327, in receive
+    on_new_message(UserMessage(text, collector, sender_id))
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/agent.py", line 305, in handle_message
+    return processor.handle_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 77, in handle_message
+    tracker = self.log_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 121, in log_message
+    self._handle_message_with_tracker(message, tracker)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 241, in _handle_message_with_tracker
+    parse_data = self._parse_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 217, in _parse_message
+    if (message.text.startswith(INTENT_MESSAGE_PREFIX) or
+AttributeError: 'NoneType' object has no attribute 'startswith'
+Exception on /webhooks/rest/webhook [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/channels/channel.py", line 327, in receive
+    on_new_message(UserMessage(text, collector, sender_id))
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/agent.py", line 305, in handle_message
+    return processor.handle_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 77, in handle_message
+    tracker = self.log_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 121, in log_message
+    self._handle_message_with_tracker(message, tracker)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 241, in _handle_message_with_tracker
+    parse_data = self._parse_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 217, in _parse_message
+    if (message.text.startswith(INTENT_MESSAGE_PREFIX) or
+AttributeError: 'NoneType' object has no attribute 'startswith'
+Exception on /webhooks/rest/webhook [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/channels/channel.py", line 327, in receive
+    on_new_message(UserMessage(text, collector, sender_id))
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/agent.py", line 305, in handle_message
+    return processor.handle_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 77, in handle_message
+    tracker = self.log_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 121, in log_message
+    self._handle_message_with_tracker(message, tracker)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 241, in _handle_message_with_tracker
+    parse_data = self._parse_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 217, in _parse_message
+    if (message.text.startswith(INTENT_MESSAGE_PREFIX) or
+AttributeError: 'NoneType' object has no attribute 'startswith'
+Exception on /webhooks/rest/webhook [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/channels/channel.py", line 327, in receive
+    on_new_message(UserMessage(text, collector, sender_id))
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/agent.py", line 305, in handle_message
+    return processor.handle_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 77, in handle_message
+    tracker = self.log_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 121, in log_message
+    self._handle_message_with_tracker(message, tracker)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 241, in _handle_message_with_tracker
+    parse_data = self._parse_message(message)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 217, in _parse_message
+    if (message.text.startswith(INTENT_MESSAGE_PREFIX) or
+AttributeError: 'NoneType' object has no attribute 'startswith'
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'utter_card_lost_type'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPConnectionPool(host='nlg', port=5056): Max retries exceeded with url: /nlg (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1ef0e30d10>: Failed to establish a new connection: [Errno 111] Connection refused',))
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/processor.py", line 319, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/actions/action.py", line 140, in run
+    tracker)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/dispatcher.py", line 141, in utter_template
+    **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/dispatcher.py", line 160, in _generate_response
+    **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/nlg/callback.py", line 117, in generate
+    timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/usr/local/lib/python2.7/site-packages/rasa_core/utils.py", line 641, in request
+    **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='nlg', port=5056): Max retries exceeded with url: /nlg (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1ef0e30d10>: Failed to establish a new connection: [Errno 111] Connection refused',))
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Sending message: hey there!
+Sending message: Which type of card have you lost?
+Sending message: hey there!
+Sending message: We have confirmed a new credit card for you
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005

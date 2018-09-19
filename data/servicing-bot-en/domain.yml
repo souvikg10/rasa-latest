@@ -1,0 +1,30 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - card_lost
+  
+entities:
+ - card_type
+ 
+slots:
+  card_type:
+    type: text
+
+templates:
+  utter_greet:
+    - "hey there!"
+  utter_goodbye:
+    - "goodbye :("
+    - "Bye-bye"
+  utter_card_lost_type:
+    - "Which type of card have you lost?"
+  utter_card_retrieval_confirmed:
+   - "We have confirmed a new {card_type} card for you"
+
+actions:
+  - utter_greet
+  - card_lost
+  - utter_card_lost_type
+  - utter_goodbye
+  - utter_card_retrieval_confirmed

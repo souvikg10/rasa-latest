@@ -1,0 +1,27 @@
+version: '3'
+services:
+  rasa_en:
+    image: rasa_core_latest
+    build:
+      context: .
+    volumes:
+      - ${PWD}:/app
+    ports:
+      - "5005:5005"
+    command: python -m rasa_core.run   -c rest -c facebook  -d data/servicing-bot-en/models/dialogue -u data/servicing-bot-en/models/servicing-bot-en/model-en --endpoints endpoints.yml --credentials credentials.yml
+  action:  
+    image: action_server
+    build:
+      context: ./actions
+    ports:
+      - "5055:5055"
+    command : python -m rasa_core_sdk.endpoint --actions actions 
+  nlg:  
+    image: nlg_server
+    build:
+      context: ./nlg
+    volumes:
+      - ${PWD}:/app
+    ports:
+      - "5056:5056"
+    command : python nlg/nlg_server.py --port 5056 --domain data/servicing-bot-en/domain.yml
