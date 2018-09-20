@@ -1,0 +1,43 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -o kubernetes
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: rasa-en
+  name: rasa-en
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: rasa-en
+    spec:
+      containers:
+      - args:
+        - python
+        - -m
+        - rasa_core.run
+        - -c
+        - rest
+        - -c
+        - facebook
+        - -d
+        - data/servicing-bot-en/models/dialogue
+        - -u
+        - data/servicing-bot-en/models/servicing-bot-en/model-en
+        - --endpoints
+        - endpoints.yml
+        - --credentials
+        - credentials.yml
+        image: rasa_core_latest
+        name: rasa-en
+        ports:
+        - containerPort: 5005
+        resources: {}
+      restartPolicy: Always
+status: {}

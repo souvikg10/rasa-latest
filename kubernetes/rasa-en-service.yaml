@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -o kubernetes
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: rasa-en
+  name: rasa-en
+spec:
+  ports:
+  - name: "5005"
+    port: 5005
+    targetPort: 5005
+  selector:
+    io.kompose.service: rasa-en
+status:
+  loadBalancer: {}
