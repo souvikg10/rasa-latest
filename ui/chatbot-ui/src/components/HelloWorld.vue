@@ -1,7 +1,13 @@
 <template>
 <div>
-  <h2>{{msg}}</h2>
-  <div>
+  <h2>CHATBOT</h2>
+  <div class="chatbot">
+    <p>{{msg}}</p>
+    <div>
+      <input type="text">
+      <button>Send</button>
+    </div>
+    
 
   </div>
 </div>
@@ -17,4 +23,10 @@ export default {
   }
 }
 </script>
+<style>
+.chatbot{
+  border: 5em;
+  border-width: 3cm;
+}
+</style>
 

@@ -1,18 +1,25 @@
 version: '3'
 services:
+  duckling:
+    image: rasa/duckling
+    ports:
+     - "8000:8000"
+    command: stack exec duckling-example-exe 
   rasa_en:
     image: rasa_core_latest
     build:
       context: .
     volumes:
-      - ${PWD}:/app
+      - ./data:/app/data
     ports:
       - "5005:5005"
-    command: python -m rasa_core.run   -c rest -c facebook  -d data/servicing-bot-en/models/dialogue -u data/servicing-bot-en/models/servicing-bot-en/model-en --endpoints endpoints.yml --credentials credentials.yml
+    command: python -m rasa_core.run   --enable_api -c rest  -d /app/data/sumIT-demo-bot/models/core/dialogue -u data/sumIT-demo-bot/models/nlu/nlu_model --endpoints endpoints.yml --credentials credentials.yml --debug
   action:  
     image: action_server
     build:
       context: ./actions
+    volumes: 
+     - ./actions:/app
     ports:
       - "5055:5055"
     command : python -m rasa_core_sdk.endpoint --actions actions 
@@ -21,7 +28,7 @@ services:
     build:
       context: ./nlg
     volumes:
-      - ${PWD}:/app
+      - ./data:/app/data
     ports:
       - "5056:5056"
-    command : python nlg/nlg_server.py --port 5056 --domain data/servicing-bot-en/domain.yml
+    command : python nlg/nlg_server.py --port 5056 --domain data/sumIT-demo-bot/domain.yml

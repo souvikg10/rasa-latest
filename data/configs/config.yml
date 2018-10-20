@@ -1,2 +1,12 @@
-language: en
-pipeline: tensorflow_embedding
+language: "fr"
+
+pipeline:
+# this is using the spacy sklearn pipeline, adding duckling
+# all components will use their default values
+
+- name: "ner_duckling_http"
+  locale: "fr_Nothing"
+  url: "http://duckling:8000"
+- name: "intent_featurizer_count_vectors"
+- name: "intent_classifier_tensorflow_embedding"
+  
