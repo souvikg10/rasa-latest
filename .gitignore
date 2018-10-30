@@ -2,3 +2,4 @@ credentials.yml
 rasa_core.log
 data/sumIT-demo-bot
 **.pyc
+__pycache__

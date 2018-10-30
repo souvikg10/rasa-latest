@@ -13,7 +13,7 @@ services:
       - ./data:/app/data
     ports:
       - "5005:5005"
-    command: python -m rasa_core.run   --enable_api -c rest  -d /app/data/sumIT-demo-bot/models/core/dialogue -u data/sumIT-demo-bot/models/nlu/nlu_model --endpoints endpoints.yml --credentials credentials.yml --debug
+    command: python -m rasa_core.run   --enable_api -c rest  data/servicing-bot-en/models/dialogue -u data/servicing-bot-en/models/servicing-bot-en/model-en --endpoints endpoints.yml --credentials credentials.yml --debug
   action:  
     image: action_server
     build:
@@ -31,4 +31,4 @@ services:
       - ./data:/app/data
     ports:
       - "5056:5056"
-    command : python nlg/nlg_server.py --port 5056 --domain data/sumIT-demo-bot/domain.yml
+    command : python nlg/nlg_server.py --port 5056 --domain data/servicing-bot-en/domain.yml
