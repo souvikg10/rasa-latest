@@ -1,5 +1,5 @@
-# rasa-latest
-Simple demo to demonstrate the rasa core's latest version
+# rasa-latest(v 0.11.3) - please note the repository is old and not maintained, so it is not the latest version anymore
+Simple demo to demonstrate the rasa core's version 0.11.3 
 
 The steps are very simple. make sure you have docker installed
 
