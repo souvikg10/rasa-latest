@@ -36,4 +36,4 @@ VOLUME ["/app/data"]
 
 EXPOSE 5005 5006
 
-CMD python bot.py -d data/servicing-bot-en/models/dialogue -u data/servicing-bot-en/models/servicing-bot-en/model-en --port $PORT -o log_file.log
+CMD python -m rasa_core.run   --enable_api -c rest  -d data/servicing-bot-en/models/dialogue -u data/servicing-bot-en/models/servicing-bot-en/model-en --endpoints endpoints.yml --credentials credentials.yml --debug
