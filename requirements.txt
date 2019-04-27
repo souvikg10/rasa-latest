@@ -32,7 +32,7 @@ pika==0.11.2
 jsonschema==2.6.0
 packaging==17.1
 gevent==1.2.2
-pyyaml==3.12
+pyyaml==4.2b1
 pytz==2018.4
 rasa_core_sdk~=0.11.0
 pymongo==3.5.1
